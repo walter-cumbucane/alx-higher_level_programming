@@ -6,6 +6,7 @@ def islower(c):
     else:
         return False
 
+
 def uppercase(str):
     for char in str:
         character = ord(char)
