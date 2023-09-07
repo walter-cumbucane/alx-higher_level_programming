@@ -1,3 +1,2 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    import task_9
+import task_9
