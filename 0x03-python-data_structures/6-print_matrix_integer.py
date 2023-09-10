@@ -6,5 +6,4 @@ def print_matrix_integer(matrix=[[]]):
     else:
         for lst in matrix:
             for num in lst:
-                print("{:d}".format(num), end=" ")
-            print("")
+                print("{:d}".format(num), end="\n" if num == lst[-1] else " ")
