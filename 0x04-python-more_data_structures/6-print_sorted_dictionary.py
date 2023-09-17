@@ -3,7 +3,7 @@
 def print_sorted_dictionary(a_dictionary):
     keys = list()
     for key in a_dictionary:
-        list_tuples.append(key)
+        keys.append(key)
     keys.sort()
     for key in keys:
         print(f"{key}: {a_dictionary[key]}")
