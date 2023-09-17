@@ -2,7 +2,7 @@
 
 def uniq_add(my_list=[]):
     if not my_list:
-        return None
+        return 0
     unique_list = set()
     result = 0
     for element in my_list:
