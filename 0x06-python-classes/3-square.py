@@ -30,5 +30,5 @@ class Square:
         Returns:
             The square's area
         """
-        area = self.__square * self.__square
+        area = self.__size * self.__size
         return area
