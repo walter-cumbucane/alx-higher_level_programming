@@ -77,7 +77,7 @@ class SinglyLinkedList:
             if node.next_node:
                 sll_print += str(node.data) + '\n'
             else:
-                sll_print += str(node.data)
+                sll_print += str(node.data) + '\n'
             node = node.next_node
         return sll_print
 
