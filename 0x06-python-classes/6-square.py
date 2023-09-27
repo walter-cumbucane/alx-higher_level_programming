@@ -71,4 +71,10 @@ class Square:
         """
        if self.__size == 0:
            print("")
-       
+       else:
+           i = 0
+           while i < self.__size:
+               for j in range(0, self.__size):
+                   print("#", end="")
+               i += 1
+               print("")
