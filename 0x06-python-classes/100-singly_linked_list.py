@@ -18,8 +18,11 @@ class Node:
         Returns:
             None
         """
-        self.__data = data
-        self.__next_node = next_node
+        if isinstance(data, int):
+            self.__data = data
+            self.__next_node = next_node
+        else:
+            raise TypeError("data must be an integer")
 
     """ data getter """
     @property
