@@ -32,7 +32,7 @@ class Node:
         if isinstance(value, int):
             self.__data = value
         else:
-            raise TypeError("next_node must be a Node object")
+            raise TypeError("data must be an integer")
 
     """ next_node getter """
     @property
