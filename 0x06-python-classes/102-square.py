@@ -41,7 +41,7 @@ class Square:
         Returns:
             The square's area
         """
-        area = self.__size * self.__size
+        area = self.__size ** 2
         return area
 
     def __eq__(self, other_square):
@@ -61,3 +61,39 @@ class Square:
            The comparison result
         """
         return self.__size != other_square.__size
+
+    def __lt__(self, other_square):
+        """implements the < comparator in instances of this class
+        Args:
+           None
+        Returns:
+           The comparison result
+        """
+        return self.__size < other_square.__size
+
+    def __gt__(self, other_square):
+        """implements the > comparator in instances of this class
+        Args:
+           None
+        Returns:
+           The comparison result
+        """
+        return self.__size > other_square.__size
+
+    def __le__(self, other_square):
+        """implements the <= comparator in instances of this class
+        Args:
+           None
+        Returns:
+           The comparison result
+        """
+        return self.__size <= other_square.__size
+
+    def __ge__(self, other_square):
+        """implements the >= comparator in instances of this class
+        Args:
+           None
+        Returns:
+           The comparison result
+        """
+        return self.__size >= other_square.__size
