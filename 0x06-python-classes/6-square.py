@@ -20,7 +20,7 @@ class Square:
         self.__size = size
         self.__position = position
 
-     """ size getter """
+    """ size getter """
     @property
     def size(self):
         return self.__size
@@ -59,8 +59,8 @@ class Square:
         Returns:
             The square's area
         """
-         area = self.__size * self.__size
-         return area
+        area = self.__size * self.__size
+        return area
 
     def my_print(self):
         """prints the square in #
@@ -69,12 +69,12 @@ class Square:
         Returns:
             None
         """
-       if self.__size == 0:
-           print("")
-       else:
-           i = 0
-           while i < self.__size:
-               for j in range(0, self.__size):
-                   print("#", end="")
-               i += 1
-               print("")
+        if self.__size == 0:
+            print("")
+        else:
+            i = 0
+            while i < self.__size:
+                for j in range(0, self.__size):
+                    print("#", end="")
+                i += 1
+                print("")
