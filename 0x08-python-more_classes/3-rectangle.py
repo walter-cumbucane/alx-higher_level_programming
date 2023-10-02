@@ -75,7 +75,7 @@ class Rectangle:
         for i in range(self.__height):
             for j in range(self.__width):
                 string += "#"
-            if i == self.__height - 1
+            if i == self.__height - 1:
                 break
             string += "\n"
         return string
