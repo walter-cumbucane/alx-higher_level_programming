@@ -1,11 +1,11 @@
 The ``0-add_integer`` module
 =====================
 
-Using ```add_integer```
+Using ``add_int``
 -------------------
 
 Importing the function
-	>>> add_integer = __import__("0-add_integer").add_integer
+	>>> add_int = __import__("0-add_integer").add_integer
 
 Checking the module docstring:
 	>>> length = __import__("0-add_integer").__doc__
@@ -14,5 +14,5 @@ Checking the module docstring:
 
 Checking the function docstring:
 	>>> length2 = __import__("0-add_integer").add_integer.__doc__
-	>>> length2 > 1
+	>>> len(length2) > 1
 	True
