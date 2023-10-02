@@ -16,3 +16,35 @@ Checking the function docstring:
 	>>> length2 = __import__("0-add_integer").add_integer.__doc__
 	>>> len(length2) > 1
 	True
+
+Checking for regular input
+	>>> add_int(2, 3)
+	5
+
+Checking for negative and positive input
+	>>> add_int(-1, 1)
+	0
+
+Checking for double negative input
+	>>> add_int(-1, -1)
+	-2
+
+Checking for float and integer inut
+	>>> add_int(4.77, 5)
+	9
+
+Checking for integer and float input
+	>>> add_int(5, 4.77)
+	9
+
+Checking for a as  non-integer input
+	>>> add_int("Hello")
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
+
+Checking for b as non-integer input
+	>>> add_int(4.66, "Hello")
+	Traceback (most recent call last):
+	...
+	TypeError: b must be an integer
