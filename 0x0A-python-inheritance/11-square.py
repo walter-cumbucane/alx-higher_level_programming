@@ -17,5 +17,5 @@ class Square(base_class):
 
     def __str__(self):
         """Makes the instance printable"""
-        printable = "[square] {}/{}".format(self.__size, self.__size)
+        printable = "[square] {:d}/{:d}".format(self.__size, self.__size)
         return printable
