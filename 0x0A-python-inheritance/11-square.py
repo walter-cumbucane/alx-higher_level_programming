@@ -13,7 +13,7 @@ class Square(base_class):
 
     def area(self):
         """Implements the area method"""
-        return self__size ** 2
+        return self.__size ** 2
 
     def __str__(self):
         """Makes the instance printable"""
