@@ -8,7 +8,13 @@ class Rectangle(base_geometry):
     def __init__(self, width, height):
         """class's constructor"""
         super().__init__()
-        super().integer_validator("rectangle", height)
-        super().integer_validator("rectangle", width)
+        try:
+            super().integer_validator("Rectangle", height)
+        except Exception as e:
+            raise TypeError("height must be an integer")
+        try:
+            super().integer_validator("Rectangle", width)
+        except Exception as e:
+            raise TypeError("width must be an integer")
         self.__width = width
         self.__height = height
