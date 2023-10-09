@@ -11,6 +11,10 @@ class Square(base_class):
         super().__init__(size, size)
         self.__size = size
 
+    def area(self):
+        """Implements the area method"""
+        return self__size ** 2
+
     def __str__(self):
         """Makes the instance printable"""
         printable = "[square] {}/{}".format(self.__size, self.__size)
