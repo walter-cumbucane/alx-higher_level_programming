@@ -3,6 +3,7 @@
 
 
 def write_file(filename="", text=""):
+    """This functions writes and returns the num of chars written to a file"""
     with open(filename, "w", encoding="utf-8") as file:
-        characters_written = file.write(text)
-        return characters_written
+        written_characters = filename.write(text)
+    return written_characters
