@@ -5,5 +5,6 @@
 def read_file(filename=""):
     """THis function reads a file and prints it to the stdout"""
     if filename:
-        file = open(filename, "r", encoding="utf-8")
-        print(file.read().rstrip())
+        with open(filename, "r", encoding="utf-8") as file:
+            print(file.read().rstrip())
+            file.close()
