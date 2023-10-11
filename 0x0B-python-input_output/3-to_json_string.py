@@ -4,6 +4,6 @@ import json
 
 
 def to_json_string(my_obj):
-    """Encodes a string object into json format"""
+    """Encodes an object into json string format"""
     json_data = json.dumps(my_obj)
     return json_data
