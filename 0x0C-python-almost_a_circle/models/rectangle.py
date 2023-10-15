@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from base import Base
+from models.base import Base
 """This modules contains a Rectangle class that inherits from Base"""
 
 
@@ -23,3 +23,33 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         self.__width = value
+
+    """Height getter"""
+    @property
+    def height(self):
+        return self.__height
+
+    """Height setter"""
+    @height.setter
+    def height(self, value):
+        self.__height = value
+
+    """X getter"""
+    @property
+    def x(self):
+        return self.__x
+
+    """X setter"""
+    @x.setter
+    def x(self, value):
+        self.__x = value
+
+    """Y getter"""
+    @property
+    def y(self):
+        return self.__y
+
+    """Y setter"""
+    @y.setter
+    def y(self, value):
+        self.__y = value
