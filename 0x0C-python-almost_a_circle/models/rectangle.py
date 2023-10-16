@@ -123,3 +123,7 @@ class Rectangle(Base):
                     self.x = args[3]
                 elif i == 4:
                     self.y = args[4]
+
+    def to_dictionary(self):
+        """Returns the dictionary representation of a Rectangle"""
+        return self.__dict__
