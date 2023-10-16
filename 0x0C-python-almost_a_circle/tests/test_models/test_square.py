@@ -49,3 +49,11 @@ class TestSquare(unittest.TestCase):
         s1.width = 500
         s1.height = 500
         self.assertEqual(s1.area(), 250000)
+
+    def testing_size_methods(self):
+        """Testing the size getters and setters"""
+        s1 = Square(1, 1, 1)
+
+        s1.size = 5
+        self.assertEqual(s1.size, 5)
+        self.assertEqual(s1.area(), 25)

@@ -103,3 +103,19 @@ class Rectangle(Base):
         printable2 = f"- {self.__width}/{self.__height}"
         printable = printable1 + printable2
         return printable
+
+    def update(self, *args):
+        """Updates the class's attributes"""
+        for i in range(len(args)):
+            if i >= 5:
+                break
+            if i == 0:
+                self.id = args[0]
+            elif i == 1:
+                self.width = args[1]
+            elif i == 2:
+                self.height = args[2]
+            elif i == 3:
+                self.x = args[3]
+            elif i == 4:
+                self.y = args[4]

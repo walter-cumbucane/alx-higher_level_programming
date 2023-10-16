@@ -80,3 +80,19 @@ class TestRectangle(unittest.TestCase):
         r1.width = 4
         r1.height = 7
         self.assertEqual(r1.area(), 28)
+
+    def testing_update_0(self):
+        """Testing the version 1 of the update method"""
+        r1= Rectangle(10, 10, 10, 10)
+
+        """Testing width"""
+        r1.update(1, 3)
+        self.assertEqual(r1.width, 3)
+        self.assertRaises(TypeError, r1.update, 1, "Hello")
+        self.assertRaises(ValueError, r1.update, 1, 0)
+
+        """Testing height"""
+        r1.update(1, 3, 5)
+        self.assertEqual(r1.height, 5)
+        self.assertRaises(TypeError, r1.update, 1, 3, tuple())
+        self.assertRaises(ValueError, r1.update, 1, 3, -1000)

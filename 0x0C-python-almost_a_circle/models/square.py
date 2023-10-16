@@ -16,3 +16,12 @@ class Square(Rectangle):
         printable2 = f" - {self.width}"
         printable = printable1 + printable2
         return printable
+
+    @property
+    def size(self):
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        self.width = value
+        self.height = value
