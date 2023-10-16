@@ -96,3 +96,15 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r1.height, 5)
         self.assertRaises(TypeError, r1.update, 1, 3, tuple())
         self.assertRaises(ValueError, r1.update, 1, 3, -1000)
+
+        """Testing X"""
+        r1.update(1, 3, 5, 1)
+        self.assertEqual(r1.x, 1)
+        self.assertRaises(TypeError, r1.update, 1, 3, 5, dict())
+        self.assertRaises(ValueError, r1.update, 1, 3, 5, -1)
+
+        """Testing y"""
+        r1.update(1, 3, 5)
+        self.assertEqual(r1.height, 5)
+        self.assertRaises(TypeError, r1.update, 1, 3, 5, 1, set())
+        self.assertRaises(ValueError, r1.update, 1, 3, 5, 1, 0)
