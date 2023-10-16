@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import unittest
-from models.base import Base
+#from models.base import Base
+from base import Base
 """This module contains unittests for the base.py module"""
 
 
