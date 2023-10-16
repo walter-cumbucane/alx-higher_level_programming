@@ -9,14 +9,14 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         """Class's constructor"""
         super().__init__(id)
-        if type(height) is not int:
-            raise TypeError("height must be an integer")
-        if height <= 0:
-            raise ValueError("height must be > 0")
         if type(width) is not int:
             raise TypeError("width must be an integer")
         if width <= 0:
             raise ValueError("width must be > 0")
+        if type(height) is not int:
+            raise TypeError("height must be an integer")
+        if height <= 0:
+            raise ValueError("height must be > 0")
         if type(x) is not int:
             raise TypeError("x must be an integer")
         if x <= 0:
@@ -85,3 +85,21 @@ class Rectangle(Base):
         if value <= 0:
             raise ValueError("y must be > 0")
         self.__y = value
+
+    def area(self):
+        """Returns the area value of the rectangle"""
+        return self.__width * self.__height
+
+    def display(self):
+        """Prints the rectangle in the stdout using the '#' symbol"""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                print("#", end="")
+            print("")
+
+    def __str__(self):
+        """Creates a printable string"""
+        printable1 = f"[Rectangle] ({self.id}) {self.__x}/{self.__y} "
+        printable2 = f"- {self.__width}/{self.__height}"
+        printable = printable1 + printable2
+        return printable

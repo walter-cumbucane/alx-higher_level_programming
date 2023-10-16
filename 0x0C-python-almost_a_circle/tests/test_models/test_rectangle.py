@@ -63,3 +63,20 @@ class TestRectangle(unittest.TestCase):
 
         self.assertRaises(TypeError, r1.y, [])
         self.assertRaises(ValueError, Rectangle, 10, 2, 4, -1000)
+
+    def testing_small_ara(self):
+        """Testing the area for small values"""
+        r1 = Rectangle(3, 5, 1, 1)
+        self.assertEqual(r1.area(), 15)
+
+    def testing_large_area(self):
+        """Testing the area for large values"""
+        r1 = Rectangle(999999999999999, 999999999999999999, 1, 1)
+        self.assertEqual(r1.area(), 999999999999998999000000000000001)
+
+    def testing_area_changed_attributes(self):
+        """Testing the area when attributes are changed"""
+        r1 = Rectangle(3, 5, 1, 1, 1)
+        r1.width = 4
+        r1.height = 7
+        self.assertEqual(r1.area(), 28)
