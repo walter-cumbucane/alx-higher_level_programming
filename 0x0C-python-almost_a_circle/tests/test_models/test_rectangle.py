@@ -27,3 +27,39 @@ class TestRectangle(unittest.TestCase):
 
     def init_with_optional_arguments(self):
         """For testing the init method with the optional arguments"""
+        r1 = Rectangle(10, 2, 4, 5, 6)
+
+        self.assertEqual(r1.width, 10)
+        self.assertEqual(r1.height, 2)
+        self.assertEqual(r1.x, 4)
+        self.assertEqual(r1.y, 5)
+        self.assertEqual(r1.id, 6)
+
+        r1.width = 1000
+        r1.height = 57689
+        r1.x = 5869
+        r1.y = 958
+        r1.id = 958
+
+        self.assertEqual(r1.width, 1000)
+        self.asserEqual(r1.height, 57689)
+        self.assertEqual(r1.x, 5869)
+        self.assertEqual(r1.y, 958)
+        self.assertEqual(r1.id, 958)
+
+    def testing_exceptions(self):
+        """For testing methods exceptions"""
+        r1 = Rectangle(10, 45, 68, 958, 5)
+
+        self.assertRaises(TypeError, r1.width, "hello")
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Rectangle(-45, 10)
+
+        self.assertRaises(TypeError, r1.height, "hello")
+        self.assertRaises(ValueError, Rectangle, 10, -5)
+
+        self.assertRaises(TypeError, r1.x, {})
+        self.assertRaises(ValueError, Rectangle, 10, 2, 0, -4)
+
+        self.assertRaises(TypeError, r1.y, [])
+        self.assertRaises(ValueError, Rectangle, 10, 2, 4, -1000)
