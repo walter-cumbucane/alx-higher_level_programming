@@ -45,3 +45,19 @@ class Square(Rectangle):
                     self.x = args[2]
                 elif i == 3:
                     self.y = args[3]
+
+    def to_dictionary(self):
+        """Returns the instance as a dictionary"""
+        attributes = self.__dict__
+        print(attributes)
+        size = self.width
+        x = self.x
+        y = self.y
+        del attributes['_Rectangle__width']
+        del attributes['_Rectangle__height']
+        del attributes['_Rectangle__x']
+        del attributes['_Rectangle__y']
+        attributes['x'] = x
+        attributes['size'] = size
+        attributes['y'] = y
+        return attributes
