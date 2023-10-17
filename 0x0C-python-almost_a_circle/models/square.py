@@ -49,7 +49,6 @@ class Square(Rectangle):
     def to_dictionary(self):
         """Returns the instance as a dictionary"""
         attributes = self.__dict__
-        print(attributes)
         size = self.width
         x = self.x
         y = self.y

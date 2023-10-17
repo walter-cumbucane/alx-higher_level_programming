@@ -1,11 +1,8 @@
 #!/usr/bin/python3
 import unittest
-#from models.square import Square
-#from models.square import Base
-#from models.rectangle import Rectangle
-from square import Square
-from rectangle import Rectangle
-from base import Base
+from models.square import Square
+from models.square import Base
+from models.rectangle import Rectangle
 """This module contains unittests for the square.py module"""
 
 

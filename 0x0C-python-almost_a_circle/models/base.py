@@ -77,8 +77,7 @@ class Base(object):
                 json_string = json_file.read()
         except FileNotFoundError as e:
             return []
-
         usual_data = Base.from_json_string(json_string)
         for dictionary in usual_data:
-            objects.append(Base.create(**dictionary))
+            objects.append(cls.create(**dictionary))
         return objects

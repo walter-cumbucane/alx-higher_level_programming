@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 import unittest
-#from models.rectangle import Rectangle
-from rectangle import Rectangle
+from models.rectangle import Rectangle
 """This module contains unittests for the rectangle.py module"""
 
 
@@ -83,7 +82,7 @@ class TestRectangle(unittest.TestCase):
 
     def testing_update_0(self):
         """Testing the version 1 of the update method"""
-        r1= Rectangle(10, 10, 10, 10)
+        r1 = Rectangle(10, 10, 10, 10)
 
         """Testing width"""
         r1.update(1, 3)
