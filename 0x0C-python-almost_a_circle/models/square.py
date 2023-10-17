@@ -17,7 +17,9 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
-        """Creates a printable object"""
+        """
+            Creates a printable object
+        """
         printable1 = f"[Square] ({self.id}) {self.x}/{self.y} "
         printable2 = f" - {self.width}"
         printable = printable1 + printable2
@@ -39,7 +41,9 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Updates the instance's attributes"""
+        """
+            Updates the instance's attributes
+        """
         if len(args) == 0:
             for key in kwargs:
                 self.__setattr__(key, kwargs[key])
@@ -59,7 +63,9 @@ class Square(Rectangle):
                     self.y = args[3]
 
     def to_dictionary(self):
-        """Returns the instance as a dictionary"""
+        """
+            Returns the instance as a dictionary
+        """
         attributes = self.__dict__
         size = self.width
         x = self.x
