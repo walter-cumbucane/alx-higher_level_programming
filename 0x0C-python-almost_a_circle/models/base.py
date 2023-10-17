@@ -33,7 +33,7 @@ class Base(object):
         if list_objs is None or len(list_objs) == 0:
             json_string = Base.to_json_string(list_objs)
             with open(filename, "w") as json_file:
-                json_file.write(json_write)
+                json_file.write(json_string)
             return
 
         list_dictionaries = list()
