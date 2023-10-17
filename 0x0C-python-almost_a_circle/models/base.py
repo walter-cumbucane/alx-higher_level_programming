@@ -44,3 +44,41 @@ class Base(object):
         json_string = Base.to_json_string(list_dictionaries)
         with open(filename, "w") as json_file:
             json_file.write(json_string)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Converts a json_string back to an usual python object"""
+        if json_string is None or len(json_string) == 0:
+            return []
+        usual_data = json.loads(json_string)
+        return usual_data
+
+    @classmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes already set"""
+        class_name = cls.__name__
+        if class_name == "Rectangle":
+            dummy = cls(1, 1, 1, 1, 1)
+            dummy.update(**dictionary)
+        elif class_name == "Square":
+            dummy = cls(1, 1, 1, 1)
+            dummy.update(**dictionary)
+        else:
+            dummy = cls()
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Returns a list of instances from a json file"""
+        filename = cls.__name__ + ".json"
+        objects = list()
+        try:
+            with open(filename, "r") as json_file:
+                json_string = json_file.read()
+        except FileNotFoundError as e:
+            return []
+
+        usual_data = Base.from_json_string(json_string)
+        for dictionary in usual_data:
+            objects.append(Base.create(**dictionary))
+        return objects
