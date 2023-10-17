@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import unittest
-from models.rectangle import Rectangle
+from rectangle import Rectangle
 """This module contains unittests for the rectangle.py module"""
 
 
