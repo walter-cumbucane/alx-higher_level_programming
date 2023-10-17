@@ -1,13 +1,15 @@
 #!/usr/bin/python3
 """
-    This module contains a Square class
+    This module contains a Square class that inherits from Rectangle
 """
-from models.square import Square
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
     """
         Defines a Square class inherits from the Rectangle class
+        Mehods:
+            __init__()
     """
 
     def __init__(self, size, x=0, y=0, id=None):
