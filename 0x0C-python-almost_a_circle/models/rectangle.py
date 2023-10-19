@@ -116,10 +116,10 @@ class Rectangle(Base):
         """
             Prints the rectangle in the stdout using the '#' symbol
         """
+        to_print = str()
         for i in range(self.__height):
-            for j in range(self.__width):
-                print("#", end="")
-            print("")
+            to_print += (" " * self.x) + ("#" * self.width) + "\n"
+        print(to_print, end="")
 
     def __str__(self):
         """
