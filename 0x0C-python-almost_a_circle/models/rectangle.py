@@ -117,11 +117,11 @@ class Rectangle(Base):
             Prints the rectangle in the stdout using the '#' symbol
         """
         to_print = str()
-        i = 0
+        j = 0
         for i in range(self.__height):
-            while i < self.y:
+            while j < self.y:
                 print("")
-                i += 1
+                j += 1
             to_print += (" " * self.x) + ("#" * self.width) + "\n"
         print(to_print, end="")
 
