@@ -1,10 +1,18 @@
 #!/usr/bin/python3
-from models.square import Square
+from models.rectangle import Rectangle
 
 
-s1 = Square(2, 3)
-s2 = Square(2, 3, 1)
-print("Check 2 Done")
 
-print(f"{s1.area()}")
-s1.display()
+r1 = Rectangle(10, 12, 0, 1)
+r2 = Rectangle(5, 4, 4, 3)
+r3 = Rectangle(10, 12, 0, 0)
+r4 = Rectangle(10, 12, 1, 0)
+
+
+r3.display()
+print("-----------")
+r4.display()
+print("------------")
+r1.display()
+print("-----------")
+r2.display()
