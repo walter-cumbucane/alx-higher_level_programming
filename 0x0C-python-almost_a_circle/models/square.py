@@ -68,15 +68,7 @@ class Square(Rectangle):
         """
             Returns the instance as a dictionary
         """
-        attributes = self.__dict__
-        size = self.width
-        x = self.x
-        y = self.y
-        del attributes['_Rectangle__width']
-        del attributes['_Rectangle__height']
-        del attributes['_Rectangle__x']
-        del attributes['_Rectangle__y']
-        attributes['x'] = x
-        attributes['size'] = size
-        attributes['y'] = y
+        attributes = {"id": self.id, "size": self.size}
+        attributes['x'] = self.x
+        attributes['y'] = self.y
         return attributes
