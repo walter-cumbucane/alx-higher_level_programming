@@ -1,21 +1,17 @@
 #!/usr/bin/python3
+""" 12-main """
 from models.rectangle import Rectangle
-from models.square import Square
 
+if __name__ == "__main__":
 
-r1 = Rectangle(10, 12, 0, 1)
-r2 = Rectangle(5, 4, 4, 3)
-r3 = Rectangle(10, 12, 0, 0)
-r4 = Rectangle(10, 12, 1, 0)
-r5 = Rectangle(5, 4, 4, 3)
-s1 = Square(3)
-print(f"{s1}")
+    r1 = Rectangle(10, 2, 1, 9)
+    print(r1)
+    r1_dictionary = r1.to_dictionary()
+    print(r1_dictionary)
+    print(type(r1_dictionary))
 
-#r3.display()
-#print("-----------")
-#r4.display()
-#print("------------")
-#r1.display()
-#print("-----------")
-#r2.display()
-r5.display()
+    r2 = Rectangle(1, 1)
+    print(r2)
+    r2.update(**r1_dictionary)
+    print(r2)
+    print(r1 == r2)
