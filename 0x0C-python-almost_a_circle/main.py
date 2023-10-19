@@ -12,7 +12,6 @@ if os.path.exists(file_path):
 list_objs = [Square(2), Square(4, 1), Square(7, 3, 4)]
 expected_list = [i.to_dictionary() for i in list_objs]
 Square.save_to_file(list_objs)
-print("Saved to file")
 
 if not os.path.exists(file_path):
     print("save_to_file doesn't create a file {}".format(file_path))

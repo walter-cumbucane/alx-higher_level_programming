@@ -37,7 +37,6 @@ class Base(object):
             return
 
         list_dictionaries = list()
-        print("About to create the list of dictionaries")
         for obj in list_objs:
             dictionary = obj.to_dictionary()
             list_dictionaries.append(dictionary)
