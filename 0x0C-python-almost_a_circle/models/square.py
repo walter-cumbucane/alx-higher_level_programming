@@ -20,9 +20,9 @@ class Square(Rectangle):
 
     def __str__(self):
         """
-            Creates a printable object
+            Overloading str function
         """
-        printable1 = f"[Square] ({self.id}) {self.x}/{self.y} "
+        printable1 = f"[Square] ({self.id}) {self.x}/{self.y}"
         printable2 = f" - {self.width}"
         printable = printable1 + printable2
         return printable
