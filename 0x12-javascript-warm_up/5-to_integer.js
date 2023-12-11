@@ -4,7 +4,7 @@ const process = require('process');
 const cmdArgs = process.argv;
 const arg = cmdArgs[2];
 
-if (isNaN(arg) || arg === undefined) {
+if (arg === undefined || isNaN(arg)) {
   console.log('Not a number');
 } else {
   const finalNumber = parseInt(arg);
