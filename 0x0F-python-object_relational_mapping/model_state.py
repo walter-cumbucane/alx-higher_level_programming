@@ -6,6 +6,8 @@ a Base class to work with MySQLAlchemy ORM.
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy import Column, String, Integer
 
+Base = declarative_base()
+
 
 class State(Base):
     """State class
@@ -22,6 +24,6 @@ class State(Base):
 
     def __init__(self, name):
         """
-            Class's Constructor
+            Class's constructor
         """
         self.name = name
