@@ -16,7 +16,7 @@ def main():
     engine = create_engine(conn)
     Session = sessionmaker(bind=engine)
     session = Session()
-    rows = session.query(State).filter(State.name.like('%a%')).all()
+    rows = session.query(State).filter(State.name.contain('a')).all()
     if rows:
         for instance in rows:
             session.delete(instance)
