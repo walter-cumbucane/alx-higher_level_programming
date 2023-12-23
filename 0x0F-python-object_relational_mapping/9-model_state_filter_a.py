@@ -12,11 +12,11 @@ def main():
     """
         Main Function
     """
-    user_name = argv[1]
+    username = argv[1]
     password = argv[2]
     database = argv[3]
 
-    conn = f"mysql://{user_name}:{password}@localhost:3306/{database}"
+    conn = f"mysql://{username}:{password}@localhost:3306/{database}"
     engine = create_engine(conn)
     Session = sessionmaker(bind=engine)
 
