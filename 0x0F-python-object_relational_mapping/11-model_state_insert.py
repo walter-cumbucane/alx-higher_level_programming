@@ -21,10 +21,10 @@ def main():
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    obj = State("Lousiana")
+    obj = State(name="Louisiana")
     session.add(obj)
     session.commit()
-    print(obj.id)
+    print("{0}".format(obj.id))
     session.close()
 
 

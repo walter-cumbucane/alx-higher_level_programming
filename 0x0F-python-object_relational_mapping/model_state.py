@@ -21,9 +21,3 @@ class State(Base):
     __tablename__ = "states"
     id = Column(Integer, primary_key=True)
     name = Column(String(128), nullable=False)
-
-    def __init__(self, name):
-        """
-            Class's constructor
-        """
-        self.name = name
