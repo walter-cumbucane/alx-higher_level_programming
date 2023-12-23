@@ -18,7 +18,7 @@ def main():
     session = Session()
     rows = session.query(State).filter(State.name.like('%a%')).all()
     if rows:
-       for instance in rows:
+        for instance in rows:
             session.delete(instance)
             session.commit()
     session.close()
