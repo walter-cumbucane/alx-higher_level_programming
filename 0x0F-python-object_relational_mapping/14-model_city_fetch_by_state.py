@@ -18,15 +18,12 @@ def main():
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    try:
-        rows = session.query(City, State).join(State).filter(City.state_id == State.id).all()
-    except Exception as e:
-        print(e)
-    for instance in rows:
-        print(f"{instance.name}: {instance.id} {instance.name}")
+    rows = session.query(City, State).join(State)
+    rows = rows.filter(City.state_id == State.id).all()
+    for city, state in rows:
+        print(f"{state.name}: ({city.id}) {city.name}")
     session.close()
 
 
 if __name__ == "__main__":
     main()
-    
