@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-    A script that inserts a row in a database using sqlalchemy
+    A script that updates a record in a database using sqlalchemy
 """
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
@@ -12,18 +12,15 @@ def main():
     """
         Main Function
     """
-    username = argv[1]
-    password = argv[2]
-    database = argv[3]
-
-    conn = f"mysql://{username}:{password}@localhost:3306/{database}"
+    conn = f"mysql://{argv[1]}:{argv[2]}@localhost:3306/{argv[3]}"
     engine = create_engine(conn)
     Session = sessionmaker(bind=engine)
 
     session = Session()
-    obj = State(name="Louisiana")
-    session.add(obj)
-    print("{0}".format(obj.id))
+    row = session.query(State).filter(State.id == 2).first()
+    if row:
+        row.name = "New Mexico"
+        session.commit()
     session.close()
 
 
