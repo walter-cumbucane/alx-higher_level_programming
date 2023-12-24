@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Implementing database operations using sqlalchemy
+"""
 from relationship_city import City
 from relationship_state import State
 from sqlalchemy import create_engine
