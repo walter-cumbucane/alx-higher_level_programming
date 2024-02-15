@@ -8,9 +8,9 @@ password = argv[2]
 database = argv[3]
 
 conn = MySQLdb.connect(host="localhost",
-                        user=username,
-                        passwd=password,
-                        db=database
+                       user=username,
+                       passwd=password,
+                       db=database
                        )
 cur = conn.cursor()
 sql = "SELECT * FROM States ORDER BY id ASC"
