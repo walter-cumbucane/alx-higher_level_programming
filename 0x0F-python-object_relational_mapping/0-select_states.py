@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Queries data from a database using a native sql driver
+"""
 from sys import argv
 import MySQLdb
 
