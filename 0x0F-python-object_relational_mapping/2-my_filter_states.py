@@ -21,7 +21,7 @@ def main():
                            db=database
                            )
     cur = conn.cursor()
-    sql = f"SELECT * FROM states WHERE name = '{matching}'"
+    sql = "SELECT * FROM states WHERE name = '{}'".format(matching)
     sql += " ORDER BY id ASC"
     cur.execute(sql)
     rows = cur.fetchall()
