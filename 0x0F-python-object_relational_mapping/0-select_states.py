@@ -6,18 +6,26 @@ from sys import argv
 import MySQLdb
 
 
-username = argv[1]
-password = argv[2]
-database = argv[3]
+def main():
+    """
+        Main Function
+    """
+    username = argv[1]
+    password = argv[2]
+    database = argv[3]
 
-conn = MySQLdb.connect(host="localhost",
-                       user=username,
-                       passwd=password,
-                       db=database
-                       )
-cur = conn.cursor()
-sql = "SELECT * FROM states ORDER BY id ASC"
-cur.execute(sql)
-rows = cur.fetchall()
-for row in rows:
-    print(row)
+    conn = MySQLdb.connect(host="localhost",
+                           user=username,
+                           passwd=password,
+                           db=database
+                           )
+    cur = conn.cursor()
+    sql = "SELECT * FROM states ORDER BY id ASC"
+    cur.execute(sql)
+    rows = cur.fetchall()
+    for row in rows:
+        print(row)
+
+
+if __name__ == "__main__":
+    main()
