@@ -13,6 +13,8 @@ conn = MySQLdb.connect(host="localhost",
                        db=database
                        )
 cur = conn.cursor()
-sql = "SELECT * FROM States ORDER BY id ASC"
+sql = "SELECT * FROM states ORDER BY id ASC"
 cur.execute(sql)
 rows = cur.fetchall()
+for row in rows:
+    print(row)
