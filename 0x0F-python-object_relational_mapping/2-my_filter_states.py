@@ -23,7 +23,6 @@ def main():
     cur = conn.cursor()
     sql = "SELECT * FROM states WHERE name LIKE BINARY '{}'".format(matching)
     sql += " ORDER BY id ASC"
-    print(sql)
     cur.execute(sql)
     rows = cur.fetchall()
     for row in rows:
