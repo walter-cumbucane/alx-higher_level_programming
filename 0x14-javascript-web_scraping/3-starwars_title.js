@@ -8,5 +8,5 @@ request(url, (err, res, body) => {
     console.log(err);
   }
   body = JSON.parse(body);
-  console.log(`${body.title}`);
+  console.log(body.title);
 });
